@@ -1,0 +1,391 @@
+Release 14.1 par P.15xf (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+MSI_ARGUETA::  Wed Oct 03 21:37:14 2012
+
+par -w -intstyle ise -ol high -mt off sparc_exu_alu_map.ncd sparc_exu_alu.ncd
+sparc_exu_alu.pcf 
+
+
+Constraints file: sparc_exu_alu.pcf.
+Loading device for application Rf_Device from file '5vfx70t.nph' in environment C:\Xilinx\14.1\ISE_DS\ISE\.
+   "sparc_exu_alu" is an NCD, version 3.2, device xc5vfx70t, package ff1136, speed -1
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 0.950 Volts. (default - Range: 0.950 to 1.050 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
+
+Device speed data version:  "PRODUCTION 1.73 2012-04-23".
+
+
+
+Device Utilization Summary:
+
+   Number of BUFGs                           3 out of 32      9%
+   Number of ILOGICs                         1 out of 800     1%
+   Number of External IOBs                 535 out of 640    83%
+      Number of LOCed IOBs                   0 out of 535     0%
+
+   Number of OLOGICs                         1 out of 800     1%
+   Number of Slices                        591 out of 11200   5%
+   Number of Slice Registers               318 out of 44800   1%
+      Number used as Flip Flops            252
+      Number used as Latches                64
+      Number used as LatchThrus              2
+
+   Number of Slice LUTS                    868 out of 44800   1%
+   Number of Slice LUT-Flip Flop pairs    1047 out of 44800   2%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 11 secs 
+Finished initial Timing Analysis.  REAL time: 11 secs 
+
+Starting Router
+
+
+Phase  1  : 5211 unrouted;      REAL time: 12 secs 
+
+Phase  2  : 5117 unrouted;      REAL time: 13 secs 
+
+Phase  3  : 2010 unrouted;      REAL time: 18 secs 
+
+Phase  4  : 1984 unrouted; (Par is working to improve performance)     REAL time: 24 secs 
+
+Updating file: sparc_exu_alu.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 26 secs 
+
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 26 secs 
+
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 40 secs 
+
+Updating file: sparc_exu_alu.ncd with current fully routed design.
+
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 41 secs 
+
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 41 secs 
+
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 41 secs 
+Total REAL time to Router completion: 41 secs 
+Total CPU time to Router completion: 43 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+INFO:Par:459 - The Clock Report is not displayed in the non timing-driven mode.
+Timing Score: 0 (Setup: 0, Hold: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net sh_ | SETUP       |         N/A|     4.448ns|     N/A|           0
+  clk_IBUF                                  | HOLD        |     0.367ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.581ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.347ns|            |       0|           0
+  ADOW_DFFS[48].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.415ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.368ns|            |       0|           0
+  ADOW_DFFS[56].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.589ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.337ns|            |       0|           0
+  ADOW_DFFS[2].s_dff/op_clk                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.395ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.369ns|            |       0|           0
+  ADOW_DFFS[7].s_dff/op_clk                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.302ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.564ns|            |       0|           0
+  ADOW_DFFS[9].s_dff/op_clk                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.411ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.362ns|            |       0|           0
+  ADOW_DFFS[17].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.266ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.587ns|            |       0|           0
+  ADOW_DFFS[25].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.726ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.347ns|            |       0|           0
+  ADOW_DFFS[33].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.496ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.378ns|            |       0|           0
+  ADOW_DFFS[41].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.484ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.371ns|            |       0|           0
+  ADOW_DFFS[59].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.136ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.556ns|            |       0|           0
+  ADOW_DFFS[0].s_dff/op_clk                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.573ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.347ns|            |       0|           0
+  ADOW_DFFS[63].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.594ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.342ns|            |       0|           0
+  ADOW_DFFS[55].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.583ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.589ns|            |       0|           0
+  ADOW_DFFS[47].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.452ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.357ns|            |       0|           0
+  ADOW_DFFS[39].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.290ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.363ns|            |       0|           0
+  ADOW_DFFS[62].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.260ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.367ns|            |       0|           0
+  ADOW_DFFS[54].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.563ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.361ns|            |       0|           0
+  ADOW_DFFS[46].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.113ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.347ns|            |       0|           0
+  ADOW_DFFS[38].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.912ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.347ns|            |       0|           0
+  ADOW_DFFS[40].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.574ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.340ns|            |       0|           0
+  ADOW_DFFS[32].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.272ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.366ns|            |       0|           0
+  ADOW_DFFS[24].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.397ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.347ns|            |       0|           0
+  ADOW_DFFS[16].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.628ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.340ns|            |       0|           0
+  ADOW_DFFS[10].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.741ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.347ns|            |       0|           0
+  ADOW_DFFS[31].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.741ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.340ns|            |       0|           0
+  ADOW_DFFS[23].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.306ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.355ns|            |       0|           0
+  ADOW_DFFS[15].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.407ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.580ns|            |       0|           0
+  ADOW_DFFS[29].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.451ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.349ns|            |       0|           0
+  ADOW_DFFS[37].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.423ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.347ns|            |       0|           0
+  ADOW_DFFS[45].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.459ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.363ns|            |       0|           0
+  ADOW_DFFS[53].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.719ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.586ns|            |       0|           0
+  ADOW_DFFS[61].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.456ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.336ns|            |       0|           0
+  ADOW_DFFS[5].s_dff/op_clk                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.416ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.362ns|            |       0|           0
+  ADOW_DFFS[60].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.616ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.347ns|            |       0|           0
+  ADOW_DFFS[52].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.613ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.565ns|            |       0|           0
+  ADOW_DFFS[44].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.740ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.562ns|            |       0|           0
+  ADOW_DFFS[36].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.131ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.344ns|            |       0|           0
+  ADOW_DFFS[28].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.420ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.347ns|            |       0|           0
+  ADOW_DFFS[4].s_dff/op_clk                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.612ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.562ns|            |       0|           0
+  ADOW_DFFS[3].s_dff/op_clk                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.594ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.366ns|            |       0|           0
+  ADOW_DFFS[20].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.442ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.371ns|            |       0|           0
+  ADOW_DFFS[12].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.603ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.347ns|            |       0|           0
+  ADOW_DFFS[57].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.411ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.366ns|            |       0|           0
+  ADOW_DFFS[49].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net sha | SETUP       |         N/A|     1.571ns|     N/A|           0
+  dow_capture_sparc_exu_alu/SHADOW_DFFS[0]. | HOLD        |     0.379ns|            |       0|           0
+  s_dff/op_clk                              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.310ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.561ns|            |       0|           0
+  ADOW_DFFS[8].s_dff/op_clk                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.313ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.368ns|            |       0|           0
+  ADOW_DFFS[14].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.473ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.336ns|            |       0|           0
+  ADOW_DFFS[22].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.406ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.588ns|            |       0|           0
+  ADOW_DFFS[30].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.599ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.363ns|            |       0|           0
+  ADOW_DFFS[50].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.526ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.560ns|            |       0|           0
+  ADOW_DFFS[42].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.403ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.586ns|            |       0|           0
+  ADOW_DFFS[34].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.430ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.366ns|            |       0|           0
+  ADOW_DFFS[26].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.615ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.344ns|            |       0|           0
+  ADOW_DFFS[18].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.009ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.336ns|            |       0|           0
+  ADOW_DFFS[11].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.441ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.371ns|            |       0|           0
+  ADOW_DFFS[6].s_dff/op_clk                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.587ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.344ns|            |       0|           0
+  ADOW_DFFS[1].s_dff/op_clk                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.602ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.348ns|            |       0|           0
+  ADOW_DFFS[58].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.603ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.584ns|            |       0|           0
+  ADOW_DFFS[21].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.582ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.336ns|            |       0|           0
+  ADOW_DFFS[13].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.548ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.378ns|            |       0|           0
+  ADOW_DFFS[19].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.696ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.367ns|            |       0|           0
+  ADOW_DFFS[27].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.411ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.347ns|            |       0|           0
+  ADOW_DFFS[35].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.565ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.340ns|            |       0|           0
+  ADOW_DFFS[43].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net add | SETUP       |         N/A|     1.569ns|     N/A|           0
+  sub/shadow_capture_sparc_exu_aluaddsub/SH | HOLD        |     0.331ns|            |       0|           0
+  ADOW_DFFS[51].s_dff/op_clk                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 47 secs 
+Total CPU time to PAR completion: 49 secs 
+
+Peak Memory Usage:  535 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 2
+
+Writing design to file sparc_exu_alu.ncd
+
+
+
+PAR done!

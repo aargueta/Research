@@ -1,0 +1,229 @@
+{\rtf1\ansi\deff0{\fonttbl{\f0\fnil\fcharset0 Courier New;}}
+{\colortbl ;\red255\green255\blue0;}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\lang1033\f0\fs22 =========================================================================\par
+*                            Final Report                               *\par
+=========================================================================\par
+Final Results\par
+RTL Top Level Output File Name     : sparc.ngr\par
+Top Level Output File Name         : sparc\par
+Output Format                      : NGC\par
+Optimization Goal                  : Speed\par
+Keep Hierarchy                     : NO\par
+\par
+Design Statistics\par
+# IOs                              : 330\par
+\par
+Cell Usage :\par
+# BELS                             : 53429\par
+#      GND                         : 1\par
+#      INV                         : 25\par
+#      LUT1                        : 243\par
+#      LUT2                        : 863\par
+#      LUT3                        : 2904\par
+#      LUT4                        : 5245\par
+#      LUT5                        : 15024\par
+#      LUT6                        : 24602\par
+#      MUXCY                       : 1479\par
+#      MUXF7                       : 2453\par
+#      VCC                         : 1\par
+#      XORCY                       : 589\par
+# FlipFlops/Latches                : 30860\par
+#      FD                          : 7125\par
+#      FD_1                        : 54\par
+#      FDC                         : 2\par
+#      FDE                         : 16249\par
+#      FDE_1                       : 3174\par
+#      FDR                         : 1163\par
+#      FDR_1                       : 1\par
+#      FDRE                        : 1067\par
+#      FDRE_1                      : 154\par
+#      FDRS                        : 361\par
+#      FDRSE                       : 3\par
+#      FDS                         : 1500\par
+#      FDS_1                       : 1\par
+#      FDSE                        : 4\par
+#      FDSE_1                      : 2\par
+# RAMS                             : 815\par
+#      RAM128X1S                   : 236\par
+#      RAM32M                      : 18\par
+#      RAM32X1D                    : 454\par
+#      RAMB18                      : 3\par
+#      RAMB18SDP                   : 16\par
+#      RAMB36_EXP                  : 86\par
+#      RAMB36SDP_EXP               : 2\par
+# Shift Registers                  : 475\par
+#      SRLC16E                     : 475\par
+# DSPs                             : 8\par
+#      DSP48E                      : 8\par
+=========================================================================\par
+\par
+Device utilization summary:\par
+---------------------------\par
+\par
+Selected Device : 5vfx70tff1136-1 \par
+\par
+\par
+Slice Logic Utilization: \par
+\highlight1  Number of Slice Registers:           30860  out of  44800    68%  \par
+ Number of Slice LUTs:                50833  out of  44800   113% (*) \par
+\highlight0     Number used as Logic:             48906  out of  44800   109% (*) \par
+    Number used as Memory:             1927  out of  13120    14%  \par
+       Number used as RAM:             1452\par
+       Number used as SRL:              475\par
+\par
+Slice Logic Distribution: \par
+ Number of LUT Flip Flop pairs used:  57720\par
+   Number with an unused Flip Flop:   26860  out of  57720    46%  \par
+   Number with an unused LUT:          6887  out of  57720    11%  \par
+   Number of fully used LUT-FF pairs: 23973  out of  57720    41%  \par
+   Number of unique control sets:      2770\par
+\par
+IO Utilization: \par
+ Number of IOs:                         330\par
+ Number of bonded IOBs:                   0  out of    640     0%  \par
+\par
+Specific Feature Utilization:\par
+ Number of Block RAM/FIFO:               98  out of    148    66%  \par
+    Number using Block RAM only:         98\par
+ Number of DSP48Es:                       8  out of    128     6%  \par
+\par
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used\par
+\par
+---------------------------\par
+Partition Resource Summary:\par
+---------------------------\par
+\par
+  No Partitions were found in this design.\par
+\par
+---------------------------\par
+\par
+\par
+=========================================================================\par
+TIMING REPORT\par
+\par
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.\par
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT\par
+      GENERATED AFTER PLACE-and-ROUTE.\par
+\par
+Clock Information:\par
+------------------\par
+-----------------------------------+---------------------------+-------+\par
+Clock Signal                       | Clock buffer(FF name)     | Load  |\par
+-----------------------------------+---------------------------+-------+\par
+gclk                               | NONE(spc_hdr/I0/dbginit_l)| 32190 |\par
+-----------------------------------+---------------------------+-------+\par
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.\par
+\par
+Asynchronous Control Signals Information:\par
+----------------------------------------\par
+------------------------------------------------------+------------------------+-------+\par
+Control Signal                                        | Buffer(FF name)        | Load  |\par
+------------------------------------------------------+------------------------+-------+\par
+exu/ecl/rstff/rst_l_inv(tlu/tsa0/reset_l_inv1_INV_0:O)| NONE(mul/rstff/q_0)    | 2     |\par
+------------------------------------------------------+------------------------+-------+\par
+\par
+Timing Summary:\par
+---------------\par
+Speed Grade: -1\par
+\par
+   \highlight1 Minimum period: 10.865ns (Maximum Frequency: 92.038MHz)\highlight0\par
+   Minimum input arrival time before clock: 7.557ns\par
+   Maximum output required time after clock: 0.471ns\par
+   Maximum combinational path delay: No path found\par
+\par
+Timing Detail:\par
+--------------\par
+All values displayed in nanoseconds (ns)\par
+\par
+=========================================================================\par
+Timing constraint: Default period analysis for Clock 'gclk'\par
+  Clock period: 10.865ns (frequency: 92.038MHz)\par
+  Total number of paths / destination ports: 12665783 / 68994\par
+-------------------------------------------------------------------------\par
+Delay:               5.433ns (Levels of Logic = 11)\par
+  Source:            lsu/dtlb/bw_r_tlb_tag_ram/tte_tag_ram2_6_2 (FF)\par
+  Destination:       lsu/stb_cam/ptag_hit_0 (FF)\par
+  Source Clock:      gclk falling\par
+  Destination Clock: gclk rising\par
+\par
+  Data Path: lsu/dtlb/bw_r_tlb_tag_ram/tte_tag_ram2_6_2 to lsu/stb_cam/ptag_hit_0\par
+                                Gate     Net\par
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)\par
+    ----------------------------------------  ------------\par
+     FDE_1:C->Q            1   0.467   0.710  lsu/dtlb/bw_r_tlb_tag_ram/tte_tag_ram2_6_2 (lsu/dtlb/bw_r_tlb_tag_ram/tte_tag_ram2_6_2)\par
+     LUT6:I3->O            1   0.094   0.000  lsu/dtlb/bw_r_tlb_tag_ram/Mcompar_mismatch_6_cmp_ne0004_lut<0> (lsu/dtlb/bw_r_tlb_tag_ram/Mcompar_mismatch_6_cmp_ne0004_lut<0>)\par
+     MUXCY:S->O            1   0.372   0.000  lsu/dtlb/bw_r_tlb_tag_ram/Mcompar_mismatch_6_cmp_ne0004_cy<0> (lsu/dtlb/bw_r_tlb_tag_ram/Mcompar_mismatch_6_cmp_ne0004_cy<0>)\par
+     MUXCY:CI->O           1   0.026   0.000  lsu/dtlb/bw_r_tlb_tag_ram/Mcompar_mismatch_6_cmp_ne0004_cy<1> (lsu/dtlb/bw_r_tlb_tag_ram/Mcompar_mismatch_6_cmp_ne0004_cy<1>)\par
+     MUXCY:CI->O           1   0.026   0.000  lsu/dtlb/bw_r_tlb_tag_ram/Mcompar_mismatch_6_cmp_ne0004_cy<2> (lsu/dtlb/bw_r_tlb_tag_ram/Mcompar_mismatch_6_cmp_ne0004_cy<2>)\par
+     MUXCY:CI->O           1   0.026   0.000  lsu/dtlb/bw_r_tlb_tag_ram/Mcompar_mismatch_6_cmp_ne0004_cy<3> (lsu/dtlb/bw_r_tlb_tag_ram/Mcompar_mismatch_6_cmp_ne0004_cy<3>)\par
+     MUXCY:CI->O           2   0.254   0.485  lsu/dtlb/bw_r_tlb_tag_ram/Mcompar_mismatch_6_cmp_ne0004_cy<4> (lsu/dtlb/bw_r_tlb_tag_ram/mismatch_6_cmp_ne0004)\par
+     LUT6:I5->O            1   0.094   0.576  lsu/dtlb/bw_r_tlb_tag_ram/cam_hit_6_or0000193_SW0 (N11989)\par
+     LUT6:I4->O            6   0.094   0.816  lsu/dtlb/bw_r_tlb_tag_ram/cam_hit_6_and00061 (lsu/dtlb/cam_hit<6>)\par
+     LUT4:I0->O            3   0.094   0.491  lsu/dtlb/cam_hit_encoded<2>1 (lsu/dtlb/cam_hit_encoded<2>)\par
+     LUT5:I4->O           98   0.094   0.620  lsu/dtlb/tlb_cam_hit1 (lsu/tlb_cam_hit)\par
+     LUT6:I5->O            1   0.094   0.000  lsu/stb_cam/byte_overlap_9_and000092 (lsu/stb_cam/byte_overlap_9_and0000)\par
+     FD:D                     -0.018          lsu/stb_cam/byte_overlap_9\par
+    ----------------------------------------\par
+    Total                      5.433ns (1.735ns logic, 3.698ns route)\par
+                                       (31.9% logic, 68.1% route)\par
+\par
+=========================================================================\par
+Timing constraint: Default OFFSET IN BEFORE for Clock 'gclk'\par
+  Total number of paths / destination ports: 359313 / 33691\par
+-------------------------------------------------------------------------\par
+Offset:              7.557ns (Levels of Logic = 6)\par
+  Source:            ctu_tst_pre_grst_l (PAD)\par
+  Destination:       tlu/tdp/dff_tlu_exu_rsr_data_m/q_5 (FF)\par
+  Destination Clock: gclk rising\par
+\par
+  Data Path: ctu_tst_pre_grst_l to tlu/tdp/dff_tlu_exu_rsr_data_m/q_5\par
+                                Gate     Net\par
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)\par
+    ----------------------------------------  ------------\par
+     LUT4:I0->O         1234   0.094   1.187  test_stub/scan_ctls/mux_drive_disable1 (mux_drive_disable)\par
+     LUT6:I1->O           43   0.094   1.198  tlu/tcl/local_rdpr_mx5_sel_2_and00001 (tlu/tlu_rdpr_mx5_sel<1>)\par
+     LUT6:I0->O           19   0.094   1.072  tlu/tcl/tlu_rdpr_mx7_sel_1_and00001 (tlu/tlu_rdpr_mx7_sel<1>)\par
+     LUT6:I1->O           53   0.094   1.104  tlu/tdp/rdpr_mx7/dout_cmp_eq00011 (tlu/tdp/rdpr_mx7/dout_cmp_eq0001)\par
+     LUT6:I1->O            1   0.094   1.069  tlu/tdp/rdpr_mx7/dout<5>134_SW0 (N5970)\par
+     LUT6:I0->O            1   0.094   0.336  tlu/tdp/rdpr_mx7/dout<5>142 (tlu/tdp/rdpr_mx7/dout<5>142)\par
+     FDS:S                     0.573          tlu/tdp/dff_tlu_exu_rsr_data_m/q_5\par
+    ----------------------------------------\par
+    Total                      7.557ns (1.590ns logic, 5.967ns route)\par
+                                       (21.0% logic, 79.0% route)\par
+\par
+=========================================================================\par
+Timing constraint: Default OFFSET OUT AFTER for Clock 'gclk'\par
+  Total number of paths / destination ports: 132 / 132\par
+-------------------------------------------------------------------------\par
+Offset:              0.471ns (Levels of Logic = 0)\par
+  Source:            test_stub/tst_ctu_mbist_fail_reg/q_0 (FF)\par
+  Destination:       tst_ctu_mbist_fail (PAD)\par
+  Source Clock:      gclk rising\par
+\par
+  Data Path: test_stub/tst_ctu_mbist_fail_reg/q_0 to tst_ctu_mbist_fail\par
+                                Gate     Net\par
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)\par
+    ----------------------------------------  ------------\par
+     FDS:C->Q              0   0.471   0.000  test_stub/tst_ctu_mbist_fail_reg/q_0 (tst_ctu_mbist_fail)\par
+    ----------------------------------------\par
+    Total                      0.471ns (0.471ns logic, 0.000ns route)\par
+                                       (100.0% logic, 0.0% route)\par
+\par
+=========================================================================\par
+\par
+\par
+Total REAL time to Xst completion: 3293.00 secs\par
+Total CPU time to Xst completion: 3272.61 secs\par
+ \par
+--> \par
+\par
+\par
+Total memory usage is 1325660 kilobytes\par
+\par
+Number of errors   :    0 (   0 filtered)\par
+Number of warnings : 8321 (   0 filtered)\par
+Number of infos    : 1154 (   0 filtered)\par
+\par
+\par
+}
+ 

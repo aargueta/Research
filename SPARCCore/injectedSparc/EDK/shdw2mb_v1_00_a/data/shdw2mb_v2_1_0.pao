@@ -1,0 +1,7 @@
+##############################################################################
+## Filename:          D:\XilinxTest\edk\pcores/shdw2mb_v1_00_a/data/shdw2mb_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Thu Apr 04 00:23:28 2013 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib shdw2mb_v1_00_a shdw2mb verilog

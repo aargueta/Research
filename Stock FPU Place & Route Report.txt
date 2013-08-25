@@ -1,0 +1,190 @@
+Release 14.1 par P.15xf (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+MSI_ARGUETA::  Tue Sep 18 23:23:45 2012
+
+par -w -intstyle ise -ol high -mt off fpu_map.ncd fpu.ncd fpu.pcf 
+
+
+Constraints file: fpu.pcf.
+Loading device for application Rf_Device from file '5vfx70t.nph' in environment C:\Xilinx\14.1\ISE_DS\ISE\.
+   "fpu" is an NCD, version 3.2, device xc5vfx70t, package ff1136, speed -1
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 0.950 Volts. (default - Range: 0.950 to 1.050 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
+
+Device speed data version:  "PRODUCTION 1.73 2012-04-23".
+
+
+
+Device Utilization Summary:
+
+   Number of BUFGs                          16 out of 32     50%
+   Number of External IOBs                 252 out of 640    39%
+      Number of LOCed IOBs                   0 out of 252     0%
+
+   Number of Slices                       4784 out of 11200  42%
+   Number of Slice Registers              6848 out of 44800   9%
+      Number used as Flip Flops           4204
+      Number used as Latches              2643
+      Number used as LatchThrus              1
+
+   Number of Slice LUTS                  13109 out of 44800  29%
+   Number of Slice LUT-Flip Flop pairs   13980 out of 44800  31%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 23 secs 
+Finished initial Timing Analysis.  REAL time: 23 secs 
+
+Starting Router
+
+
+Phase  1  : 70475 unrouted;      REAL time: 28 secs 
+
+Phase  2  : 68185 unrouted;      REAL time: 34 secs 
+
+Phase  3  : 34856 unrouted;      REAL time: 1 mins 23 secs 
+
+Phase  4  : 35533 unrouted; (Par is working to improve performance)     REAL time: 1 mins 36 secs 
+
+Updating file: fpu.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 mins 28 secs 
+
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 mins 31 secs 
+
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 mins 50 secs 
+
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 mins 39 secs 
+
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 mins 39 secs 
+
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 mins 43 secs 
+Total REAL time to Router completion: 3 mins 43 secs 
+Total CPU time to Router completion: 3 mins 47 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+INFO:Par:459 - The Clock Report is not displayed in the non timing-driven mode.
+Timing Score: 0 (Setup: 0, Hold: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net i_f | SETUP       |         N/A|     1.121ns|     N/A|           0
+  pu_inq_sram/inq_ary_13_cmp_eq0000         | HOLD        |     0.729ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net fpu | SETUP       |         N/A|     5.978ns|     N/A|           0
+  _mul/i_m4stg_frac/booth/clk_enb0          | HOLD        |     0.470ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net fpu | SETUP       |         N/A|     5.441ns|     N/A|           0
+  _div/fpu_div_exp_dp/clk                   | HOLD        |     0.443ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net i_f | SETUP       |         N/A|     1.120ns|     N/A|           0
+  pu_inq_sram/inq_ary_14_cmp_eq0000         | HOLD        |     0.741ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net i_f | SETUP       |         N/A|     1.119ns|     N/A|           0
+  pu_inq_sram/inq_ary_15_cmp_eq0000         | HOLD        |     0.730ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net i_f | SETUP       |         N/A|     1.121ns|     N/A|           0
+  pu_inq_sram/inq_ary_12_cmp_eq0000         | HOLD        |     0.727ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net fpu | SETUP       |         N/A|     7.035ns|     N/A|           0
+  _mul/fpu_mul_exp_dp/clk                   | HOLD        |     0.475ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net fpu | SETUP       |         N/A|     7.222ns|     N/A|           0
+  _add/fpu_add_exp_dp/clk                   | HOLD        |     0.445ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net rcl | SETUP       |         N/A|     6.089ns|     N/A|           0
+  k                                         | HOLD        |     0.334ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net gcl | SETUP       |         N/A|     1.103ns|     N/A|           0
+  k_IBUF                                    | HOLD        |     0.404ns|            |       0|           0
+                                            | MINPERIOD   |         N/A|     1.666ns|     N/A|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net i_f | SETUP       |         N/A|     1.121ns|     N/A|           0
+  pu_inq_sram/inq_ary_3_cmp_eq0000          | HOLD        |     0.739ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net i_f | SETUP       |         N/A|     1.122ns|     N/A|           0
+  pu_inq_sram/inq_ary_0_not0001             | HOLD        |     0.711ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net i_f | SETUP       |         N/A|     1.121ns|     N/A|           0
+  pu_inq_sram/inq_ary_1_cmp_eq0000          | HOLD        |     0.717ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net i_f | SETUP       |         N/A|     1.121ns|     N/A|           0
+  pu_inq_sram/inq_ary_2_cmp_eq0000          | HOLD        |     0.717ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net i_f | SETUP       |         N/A|     1.121ns|     N/A|           0
+  pu_inq_sram/inq_ary_4_cmp_eq0000          | HOLD        |     0.716ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net i_f | SETUP       |         N/A|     1.121ns|     N/A|           0
+  pu_inq_sram/inq_ary_5_cmp_eq0000          | HOLD        |     0.733ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net i_f | SETUP       |         N/A|     1.120ns|     N/A|           0
+  pu_inq_sram/inq_ary_6_cmp_eq0000          | HOLD        |     0.730ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net i_f | SETUP       |         N/A|     1.121ns|     N/A|           0
+  pu_inq_sram/inq_ary_7_cmp_eq0000          | HOLD        |     0.731ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net i_f | SETUP       |         N/A|     1.115ns|     N/A|           0
+  pu_inq_sram/inq_ary_8_cmp_eq0000          | HOLD        |     0.729ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net i_f | SETUP       |         N/A|     1.121ns|     N/A|           0
+  pu_inq_sram/inq_ary_9_cmp_eq0000          | HOLD        |     0.731ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net i_f | SETUP       |         N/A|     1.121ns|     N/A|           0
+  pu_inq_sram/inq_ary_11_cmp_eq0000         | HOLD        |     0.727ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net i_f | SETUP       |         N/A|     1.121ns|     N/A|           0
+  pu_inq_sram/inq_ary_10_cmp_eq0000         | HOLD        |     0.725ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 3 mins 52 secs 
+Total CPU time to PAR completion: 3 mins 55 secs 
+
+Peak Memory Usage:  772 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 2
+
+Writing design to file fpu.ncd
+
+
+
+PAR done!

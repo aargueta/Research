@@ -1,0 +1,104 @@
+Release 14.1 Map P.15xf (nt64)
+Xilinx Mapping Report File for Design 'sparc_exu_byp'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc5vfx70t-ff1136-1 -w -logic_opt off -ol
+high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr
+off -lc off -power off -o sparc_exu_byp_map.ncd sparc_exu_byp.ngd
+sparc_exu_byp.pcf 
+Target Device  : xc5vfx70t
+Target Package : ff1136
+Target Speed   : -1
+Mapper Version : virtex5 -- $Revision: 1.55 $
+Mapped Date    : Thu Oct 04 10:02:40 2012
+
+Interim Summary
+---------------
+Slice Logic Utilization:
+  Number of Slice Registers:                   705 out of  44,800    1%
+    Number used as Flip Flops:                 704
+    Number used as Latches:                      1
+  Number of Slice LUTs:                      2,382 out of  44,800    5%
+    Number used as logic:                    2,382 out of  44,800    5%
+      Number using O6 output only:           2,382
+
+Slice Logic Distribution:
+  Number of LUT Flip Flop pairs used:        2,638
+    Number with an unused Flip Flop:         1,933 out of   2,638   73%
+    Number with an unused LUT:                 256 out of   2,638    9%
+    Number of fully used LUT-FF pairs:         449 out of   2,638   17%
+    Number of unique control sets:             250
+    Number of slice register sites lost
+      to control set restrictions:             743 out of  44,800    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                     1,781 out of     640  278% (OVERMAPPED)
+    IOB Flip Flops:                            194
+
+Specific Feature Utilization:
+  Number of BUFG/BUFGCTRLs:                      2 out of      32    6%
+    Number used as BUFGs:                        2
+
+
+Mapping completed.
+See MAP report file "sparc_exu_byp_map.mrp" for details.
+Problem encountered during the packing phase.
+
+Design Summary
+--------------
+Number of errors   :   2
+Number of warnings :   0
+
+Section 1 - Errors
+------------------
+ERROR:Pack:2309 - Too many bonded comps of type "IOB" found to fit this device.
+ERROR:Map:237 - The design is too large to fit the device.  Please check the
+   Design Summary section to see which resource requirement for your design
+   exceeds the resources available in the device. Note that the number of slices
+   reported may not be reflected accurately as their packing might not have been
+   completed.
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network si has no load.
+INFO:LIT:395 - The above info message is repeated 1 more times for the following
+   (max. 5 shown):
+   so
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 0.950 Volts. (default - Range: 0.950 to
+   1.050 Volts)
+
+Section 4 - Removed Logic Summary
+---------------------------------
+
+Section 5 - Removed Logic
+-------------------------
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 12 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 13 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.

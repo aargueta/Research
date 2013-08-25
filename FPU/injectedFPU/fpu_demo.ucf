@@ -1,0 +1,30 @@
+# Clock
+NET "clk" LOC = "AH15";
+NET "clk" TNM_NET = "clk";
+TIMESPEC "TS_clock" = PERIOD "clk" 67817 ps HIGH 50 %; #14706
+
+# Push button interface
+NET "up_button"    LOC = "U8";
+
+# Serial Port
+NET "serial1_tx" LOC = "AG20";
+
+# LED interface
+NET "leds_l<0>" LOC = "AD26";
+NET "leds_l<1>" LOC = "G15";
+NET "leds_l<2>" LOC = "L18";
+NET "leds_l<3>" LOC = "H18";
+NET "leds_r<0>" LOC = "AE24";
+NET "leds_r<1>" LOC = "AD24";
+NET "leds_r<2>" LOC = "AD25";
+NET "leds_r<3>" LOC = "G16";
+
+# DIP switch
+NET "sw<1>" LOC = "U25";
+NET "sw<2>" LOC = "AG27";
+NET "sw<3>" LOC = "AF25";
+NET "sw<4>" LOC = "AF26";
+NET "sw<5>" LOC = "AE27";
+NET "sw<6>" LOC = "AE26";
+NET "sw<7>" LOC = "AC25";
+NET "sw<8>" LOC = "AC24";
