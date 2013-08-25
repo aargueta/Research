@@ -127,15 +127,12 @@ rclk
 	output	[3:0]	ch_out_vld; // Chains out Valid
 	output	[3:0]	ch_out_done; // Chains done
 
-	assign ch_out = 4'b000;
-	assign ch_out_vld = 4'b0000;
-	assign ch_out_done = 4'b1111;
 
 //*****[SHADOW WIRE INSTANTIATIONS]*****
 	wire [5:0] inst_ch_out;
 	wire [5:0] inst_ch_out_vld;
 	wire [5:0] inst_ch_out_done;
-	wire [5:0] ch_dump_en = 6'b000000;
+	wire [5:0] ch_dump_en;
 
 
 
@@ -657,7 +654,7 @@ spu_ctl spu_ctl (
 
 
 	//[Shadow Module Instantiation here]
-	/*shadow_capture #(.DFF_BITS(0), .USE_DCLK(0), .CHAINS_IN(6), .CHAINS_OUT(4), .DISCRETE_DFFS(), .DFF_WIDTHS()) shadow_capture_spu (
+	shadow_capture #(.DFF_BITS(0), .USE_DCLK(0), .CHAINS_IN(6), .CHAINS_OUT(4), .DISCRETE_DFFS(), .DFF_WIDTHS()) shadow_capture_spu (
 		.clk(sh_clk), 
 		.rst(sh_rst), 
 		.capture_en(c_en), 
@@ -671,5 +668,5 @@ spu_ctl spu_ctl (
 		.chains_out(ch_out), 
 		.chains_out_vld(ch_out_vld), 
 		.chains_out_done(ch_out_done)
-	);*/
+	);
 endmodule

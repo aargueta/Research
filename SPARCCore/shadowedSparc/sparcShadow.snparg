@@ -26,8 +26,8 @@ spu_lsurpt1,392,0,1,1
 spu_madp,842,0,3,1
 spu,0,6,4,
 lsu_dcdp,90,0,1,1
-lsu_dcache_lfsr,5,0,1,1
-lsu_dctl,667,1,2,1
+lsu_dcache_lfsr,5,0,2,1
+lsu_dctl,667,2,2,1
 lsu_dctldp,719,0,2,1
 lsu_excpctl,105,0,1,1
 lsu_pcx_qmon,3,0,1,1
@@ -66,8 +66,8 @@ sparc_ifu_swl,138,6,1,1
 sparc_ifu_wseldp,2,0,1,1
 sparc_ifu,0,16,7,
 bw_r_frf,166,0,1,1
-sparc_ffu_ctl_visctl,174,0,1,1
-sparc_ffu_ctl,253,1,2,1
+sparc_ffu_ctl_visctl,174,0,2,1
+sparc_ffu_ctl,253,2,2,1
 sparc_ffu_dp,449,0,2,1
 sparc_ffu,0,5,3,
 bw_r_irf,34,0,1,1
@@ -75,8 +75,8 @@ sparc_exu_aluaddsub,64,0,1,1
 sparc_exu_alu,1,1,1,1
 sparc_exu_byp_eccgen,50,0,1,1
 sparc_exu_byp,608,2,2,1
-sparc_exu_div_yreg,160,0,1,1
-sparc_exu_div,384,1,2,1
+sparc_exu_div_yreg,160,0,2,1
+sparc_exu_div,384,2,2,1
 sparc_exu_ecc,237,0,1,1
 sparc_exu_ecl_cnt6,6,0,1,1
 sparc_exu_ecl_divcntl,21,1,1,1

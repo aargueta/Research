@@ -147,17 +147,13 @@ module lsu ( /*AUTOARG*/
 	output	[9:0]	ch_out; // Chains out
 	output	[9:0]	ch_out_vld; // Chains out Valid
 	output	[9:0]	ch_out_done; // Chains done
-	
-	assign ch_out = 10'd0;
-	assign ch_out_vld = 10'd0;
-	assign ch_out_done = 10'b1111111111;
 
 
 //*****[SHADOW WIRE INSTANTIATIONS]*****
 	wire [24:0] inst_ch_out;
 	wire [24:0] inst_ch_out_vld;
 	wire [24:0] inst_ch_out_done;
-	wire [24:0] ch_dump_en = 25'd0;
+	wire [24:0] ch_dump_en;
 
 
 /*AUTOINPUT*/
@@ -5293,7 +5289,7 @@ bw_r_rf32x152b   dfq   (
                         .se             (se));
 
 	//[Shadow Module Instantiation here]
-	/*shadow_capture #(.DFF_BITS(0), .USE_DCLK(0), .CHAINS_IN(25), .CHAINS_OUT(10), .DISCRETE_DFFS(), .DFF_WIDTHS()) shadow_capture_lsu (
+	shadow_capture #(.DFF_BITS(0), .USE_DCLK(0), .CHAINS_IN(25), .CHAINS_OUT(10), .DISCRETE_DFFS(), .DFF_WIDTHS()) shadow_capture_lsu (
 		.clk(sh_clk), 
 		.rst(sh_rst), 
 		.capture_en(c_en), 
@@ -5307,7 +5303,7 @@ bw_r_rf32x152b   dfq   (
 		.chains_out(ch_out), 
 		.chains_out_vld(ch_out_vld), 
 		.chains_out_done(ch_out_done)
-	);*/
+	);
 endmodule
 
 // Local Variables:

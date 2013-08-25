@@ -3954,7 +3954,8 @@ lsu_pcx_qmon  l2bank0_qmon (
   .send_to_pcx  (spc_pcx_req_update_w2[0]),
   //.qwrite   (queue_write[0]),
   .qwrite   (pre_qwr[0]),
-  .sel_qentry0  (sel_qentry0[0]),
+  .sel_qentry0  (sel_qentry0[0])
+,
 		.sh_clk(sh_clk),   // [SHADOW]
 		.sh_rst(sh_rst),   // [SHADOW]
 		.c_en(c_en),   // [SHADOW]
@@ -3976,7 +3977,8 @@ lsu_pcx_qmon  l2bank1_qmon (
   .send_to_pcx  (spc_pcx_req_update_w2[1]),
   //.qwrite   (queue_write[1]),
   .qwrite   (pre_qwr[1]),
-  .sel_qentry0  (sel_qentry0[1]),
+  .sel_qentry0  (sel_qentry0[1])
+,
 		.sh_clk(sh_clk),   // [SHADOW]
 		.sh_rst(sh_rst),   // [SHADOW]
 		.c_en(c_en),   // [SHADOW]
@@ -3998,7 +4000,8 @@ lsu_pcx_qmon  l2bank2_qmon (
   .send_to_pcx  (spc_pcx_req_update_w2[2]),
   //.qwrite   (queue_write[2]),
   .qwrite   (pre_qwr[2]),
-  .sel_qentry0  (sel_qentry0[2]),
+  .sel_qentry0  (sel_qentry0[2])
+,
 		.sh_clk(sh_clk),   // [SHADOW]
 		.sh_rst(sh_rst),   // [SHADOW]
 		.c_en(c_en),   // [SHADOW]
@@ -4020,7 +4023,8 @@ lsu_pcx_qmon  l2bank3_qmon (
   .send_to_pcx  (spc_pcx_req_update_w2[3]),
   //.qwrite   (queue_write[3]),
   .qwrite   (pre_qwr[3]),
-  .sel_qentry0  (sel_qentry0[3]),
+  .sel_qentry0  (sel_qentry0[3])
+,
 		.sh_clk(sh_clk),   // [SHADOW]
 		.sh_rst(sh_rst),   // [SHADOW]
 		.c_en(c_en),   // [SHADOW]
@@ -4042,7 +4046,8 @@ lsu_pcx_qmon  fpiobridge_qmon (
   .send_to_pcx  (spc_pcx_req_update_w2[4]),
   //.qwrite   (queue_write[4]),
   .qwrite   (pre_qwr[4]),
-  .sel_qentry0  (sel_qentry0[4]),
+  .sel_qentry0  (sel_qentry0[4])
+,
 		.sh_clk(sh_clk),   // [SHADOW]
 		.sh_rst(sh_rst),   // [SHADOW]
 		.c_en(c_en),   // [SHADOW]

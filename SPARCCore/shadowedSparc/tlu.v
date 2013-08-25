@@ -131,15 +131,13 @@ module tlu (/*AUTOARG*/
 	output	[6:0]	ch_out; // Chains out
 	output	[6:0]	ch_out_vld; // Chains out Valid
 	output	[6:0]	ch_out_done; // Chains done
-   assign ch_out = 7'd0;
-   assign ch_out_vld = 7'd0;
-   assign ch_out_done = 7'b1111111;
+
 
 //*****[SHADOW WIRE INSTANTIATIONS]*****
 	wire [13:0] inst_ch_out;
 	wire [13:0] inst_ch_out_vld;
 	wire [13:0] inst_ch_out_done;
-	wire [13:0] ch_dump_en = 14'b00000000000;
+	wire [13:0] ch_dump_en;
 
 
 
@@ -1954,7 +1952,7 @@ bw_r_rf32x80 tlu_scpd (
 );
 
 	//[Shadow Module Instantiation here]
-	/*shadow_capture #(.DFF_BITS(0), .USE_DCLK(0), .CHAINS_IN(14), .CHAINS_OUT(7), .DISCRETE_DFFS(), .DFF_WIDTHS()) shadow_capture_tlu (
+	shadow_capture #(.DFF_BITS(0), .USE_DCLK(0), .CHAINS_IN(14), .CHAINS_OUT(7), .DISCRETE_DFFS(), .DFF_WIDTHS()) shadow_capture_tlu (
 		.clk(sh_clk), 
 		.rst(sh_rst), 
 		.capture_en(c_en), 
@@ -1968,7 +1966,7 @@ bw_r_rf32x80 tlu_scpd (
 		.chains_out(ch_out), 
 		.chains_out_vld(ch_out_vld), 
 		.chains_out_done(ch_out_done)
-	);*/
+	);
 endmodule
 // Local Variables:
 // verilog-library-directories:("." "../../../srams/rtl")

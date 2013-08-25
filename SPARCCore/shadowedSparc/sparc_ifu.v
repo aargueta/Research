@@ -160,16 +160,12 @@ module sparc_ifu (/*AUTOARG*/
 	output	[6:0]	ch_out_vld; // Chains out Valid
 	output	[6:0]	ch_out_done; // Chains done
 
-	assign ch_out = 7'd0;
-	assign ch_out_vld = 7'd0;
-	assign ch_out_done = 7'b1111111;
-
 
 //*****[SHADOW WIRE INSTANTIATIONS]*****
 	wire [15:0] inst_ch_out;
 	wire [15:0] inst_ch_out_vld;
 	wire [15:0] inst_ch_out_done;
-	wire [15:0] ch_dump_en = 16'd0;
+	wire [15:0] ch_dump_en;
 
 
 
@@ -2471,7 +2467,7 @@ module sparc_ifu (/*AUTOARG*/
 				
 
 	//[Shadow Module Instantiation here]
-	/*shadow_capture #(.DFF_BITS(0), .USE_DCLK(0), .CHAINS_IN(16), .CHAINS_OUT(7), .DISCRETE_DFFS(), .DFF_WIDTHS()) shadow_capture_sparc_ifu (
+	shadow_capture #(.DFF_BITS(0), .USE_DCLK(0), .CHAINS_IN(16), .CHAINS_OUT(7), .DISCRETE_DFFS(), .DFF_WIDTHS()) shadow_capture_sparc_ifu (
 		.clk(sh_clk), 
 		.rst(sh_rst), 
 		.capture_en(c_en), 
@@ -2485,7 +2481,7 @@ module sparc_ifu (/*AUTOARG*/
 		.chains_out(ch_out), 
 		.chains_out_vld(ch_out_vld), 
 		.chains_out_done(ch_out_done)
-	);*/
+	);
 endmodule
 // Local Variables:
 // verilog-library-directories:("." "../../../srams/rtl" "../../../common/rtl")

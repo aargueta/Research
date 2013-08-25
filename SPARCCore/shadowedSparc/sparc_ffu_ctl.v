@@ -111,10 +111,10 @@ module sparc_ffu_ctl (/*AUTOARG*/
 
 
 //*****[SHADOW WIRE INSTANTIATIONS]*****
-	wire inst_ch_out;
-	wire inst_ch_out_vld;
-	wire inst_ch_out_done;
-	wire ch_dump_en;
+	wire [1:0] inst_ch_out;
+	wire [1:0] inst_ch_out_vld;
+	wire [1:0] inst_ch_out_done;
+	wire [1:0] ch_dump_en;
 
    /*AUTOINPUT*/
    // Beginning of automatic inputs (from unused autoinst inputs)
@@ -1922,15 +1922,15 @@ module sparc_ffu_ctl (/*AUTOARG*/
 		.sh_clk(sh_clk),   // [SHADOW]
 		.sh_rst(sh_rst),   // [SHADOW]
 		.c_en(c_en),   // [SHADOW]
-		.dump_en(ch_dump_en),   // [SHADOW]
-		.ch_out(inst_ch_out),   // [SHADOW]
-		.ch_out_done(inst_ch_out_done),    // [SHADOW]
-		.ch_out_vld(inst_ch_out_vld) // [SHADOW]
+		.dump_en(ch_dump_en[1:0]),   // [SHADOW]
+		.ch_out(inst_ch_out[1:0]),   // [SHADOW]
+		.ch_out_done(inst_ch_out_done[1:0]),    // [SHADOW]
+		.ch_out_vld(inst_ch_out_vld[1:0]) // [SHADOW]
 );
 
 
 	//[Shadow Module Instantiation here]
-	shadow_capture #(.DFF_BITS(253), .USE_DCLK(1), .CHAINS_IN(1), .CHAINS_OUT(2), .DISCRETE_DFFS(1), .DFF_WIDTHS({32'd253})) shadow_capture_sparc_ffu_ctl (
+	shadow_capture #(.DFF_BITS(253), .USE_DCLK(1), .CHAINS_IN(2), .CHAINS_OUT(2), .DISCRETE_DFFS(1), .DFF_WIDTHS({32'd253})) shadow_capture_sparc_ffu_ctl (
 		.clk(sh_clk), 
 		.rst(sh_rst), 
 		.capture_en(c_en), 

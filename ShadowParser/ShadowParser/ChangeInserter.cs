@@ -150,7 +150,7 @@ namespace ShadowParser {
             int chainOutBit = 0;
             foreach (VerilogModuleInstance vmi in vMod.InstantiatedModules) {
 
-                StringBuilder update = new StringBuilder("," + Environment.NewLine);
+                StringBuilder update = new StringBuilder();//"," + Environment.NewLine);
                 if (mode == InserterMode.Error || mode == InserterMode.Both) {
                     if (vmi.Type.ErrorControlWidth > 0) {
                         String paramChange = String.Empty;

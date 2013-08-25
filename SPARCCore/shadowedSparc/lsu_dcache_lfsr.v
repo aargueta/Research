@@ -45,10 +45,10 @@ module lsu_dcache_lfsr (/*AUTOARG*/
 	input	sh_clk; // Shadow/data clock
 	input	sh_rst; // Shadow/data reset
 	input	c_en; // Capture enable
-	input	[0:0]	dump_en; // Dump enable
-	output	[0:0]	ch_out; // Chains out
-	output	[0:0]	ch_out_vld; // Chains out Valid
-	output	[0:0]	ch_out_done; // Chains done
+	input	[1:0]	dump_en; // Dump enable
+	output	[1:0]	ch_out; // Chains out
+	output	[1:0]	ch_out_vld; // Chains out Valid
+	output	[1:0]	ch_out_done; // Chains done
 
    input 	advance;
    
@@ -97,7 +97,7 @@ module lsu_dcache_lfsr (/*AUTOARG*/
    
 
 	//[Shadow Module Instantiation here]
-	shadow_capture #(.DFF_BITS(5), .USE_DCLK(1), .CHAINS_IN(0), .CHAINS_OUT(1), .DISCRETE_DFFS(1), .DFF_WIDTHS({32'd5})) shadow_capture_lsu_dcache_lfsr (
+	shadow_capture #(.DFF_BITS(5), .USE_DCLK(1), .CHAINS_IN(0), .CHAINS_OUT(2), .DISCRETE_DFFS(1), .DFF_WIDTHS({32'd5})) shadow_capture_lsu_dcache_lfsr (
 		.clk(sh_clk), 
 		.rst(sh_rst), 
 		.capture_en(c_en), 
